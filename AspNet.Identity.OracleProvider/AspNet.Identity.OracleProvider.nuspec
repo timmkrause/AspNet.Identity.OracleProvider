@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>AspNet.Identity.OracleProvider</id>
+    <version>$version$</version>
+    <authors>Timm Krause</authors>
+    <owners>Timm Krause</owners>
+    <projectUrl>https://github.com/timmkrause/AspNet.Identity.OracleProvider</projectUrl>
+    <licenseUrl>https://raw.github.com/timmkrause/AspNet.Identity.OracleProvider/master/AspNet.Identity.OracleProvider/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>$description$</summary>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2014 Timm Krause (timm.krause1@gmail.com)</copyright>
+  </metadata>
+</package>
