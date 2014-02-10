@@ -59,7 +59,6 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="IdentityRole.cs" />
     <Compile Include="IdentityUser.cs" />
-    <None Include="LICENSE" />
     <Compile Include="OracleDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\RoleRepository.cs" />
@@ -73,13 +72,9 @@
   <ItemGroup>
     <None Include="AspNet.Identity.OracleProvider.nuspec" />
     <None Include="packages.config" />
-    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="OracleIdentity.sql" />
-    <Content Include="README.html">
-      <DependentUpon>README.md</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
