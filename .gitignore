@@ -23,6 +23,7 @@
 obj/
 [Rr]elease*/
 _ReSharper*/
+TestResults/
 
 #EntityFramework
 *.mdf
