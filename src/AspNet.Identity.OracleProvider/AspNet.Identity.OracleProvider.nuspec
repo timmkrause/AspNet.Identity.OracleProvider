@@ -3,6 +3,7 @@
   <metadata>
     <id>AspNet.Identity.OracleProvider</id>
     <version>$version$</version>
+    <title>$title$</title>
     <authors>Timm Krause</authors>
     <owners>Timm Krause</owners>
     <projectUrl>https://github.com/timmkrause/AspNet.Identity.OracleProvider</projectUrl>
