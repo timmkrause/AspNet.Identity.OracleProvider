@@ -6,7 +6,7 @@
     <authors>Timm Krause</authors>
     <owners>Timm Krause</owners>
     <projectUrl>https://github.com/timmkrause/AspNet.Identity.OracleProvider</projectUrl>
-    <licenseUrl>https://raw.github.com/timmkrause/AspNet.Identity.OracleProvider/master/AspNet.Identity.OracleProvider/LICENSE</licenseUrl>
+    <licenseUrl>https://raw.github.com/timmkrause/AspNet.Identity.OracleProvider/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>$description$</summary>
     <description>$description$</description>
