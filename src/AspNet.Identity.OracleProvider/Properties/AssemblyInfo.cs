@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("AspNet.Identity.OracleProvider")]
 [assembly: AssemblyCopyright("Copyright © Timm Krause 2014")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("en-US")]
+[assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("051142e2-9936-4eb4-9a92-83a1d1ad63f6")]
 [assembly: AssemblyVersion("1.0.0.0")]
