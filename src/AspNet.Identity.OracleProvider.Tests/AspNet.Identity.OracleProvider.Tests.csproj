@@ -62,6 +62,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AssemblyCleanupProcess.cs" />
+    <Compile Include="AssemblyInitializationProcess.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="IntegrationTests\RoleManagerTests.cs" />
     <Compile Include="IntegrationTests\UserManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

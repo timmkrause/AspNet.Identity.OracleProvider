@@ -2,6 +2,7 @@
 
 namespace AspNet.Identity.OracleProvider.Tests
 {
+    using System;
     using Microsoft.AspNet.Identity;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Oracle.ManagedDataAccess.Client;
@@ -9,17 +10,31 @@ namespace AspNet.Identity.OracleProvider.Tests
     [TestClass]
     public class UserManagerTests
     {
-        private const string _connectionString = "";
+        private const string _password = "123456";
+
+        private UserStore _userStore;
+        private UserManager<IdentityUser> _userManager;
+
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            var oracleDataContext = new OracleDataContext(new OracleConnection(Configuration.ConnectionString));
+
+            _userStore = new UserStore(oracleDataContext);
+            _userManager = new UserManager<IdentityUser>(_userStore);
+        }
 
         [TestMethod]
         public void CreateShouldReturnSucceededResult()
         {
-            var userStore = new UserStore(new OracleDataContext(new OracleConnection(_connectionString)));
-            var userManager = new UserManager<IdentityUser>(userStore);
-
-            var result = userManager.Create(new IdentityUser { UserName = "timmkrause" }, "123456");
+            var result = _userManager.Create(new IdentityUser { UserName = GetNewUserName() }, _password);
 
             Assert.IsTrue(result.Succeeded);
+        }
+
+        private string GetNewUserName()
+        {
+            return Guid.NewGuid().ToString().Replace("-", string.Empty);
         }
     }
 }
