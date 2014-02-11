@@ -10,6 +10,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>$description$</summary>
     <description>$description$</description>
+    <tags>Identity Membership Oracle Provider AspNet</tags>
     <releaseNotes></releaseNotes>
     <language>en-US</language>
     <copyright>Copyright (c) 2014 Timm Krause (timm.krause1@gmail.com)</copyright>
