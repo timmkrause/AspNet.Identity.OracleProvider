@@ -3,6 +3,8 @@ AspNet.Identity.OracleProvider
 
 ASP.NET Identity provider for Oracle databases.
 
+A pre-release version is available on NuGet: https://www.nuget.org/packages/AspNet.Identity.OracleProvider
+
 Status
 ======
 
