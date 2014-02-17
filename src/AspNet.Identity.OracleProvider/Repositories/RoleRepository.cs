@@ -37,6 +37,7 @@ namespace AspNet.Identity.OracleProvider.Repositories
 
             return _db.ExecuteNonQuery(
                 "UPDATE roles SET name = :name WHERE id = :id",
+                new OracleParameter { ParameterName = ":name", Value = role.Name, OracleDbType = OracleDbType.Varchar2, Direction = ParameterDirection.Input },
                 new OracleParameter { ParameterName = ":id", Value = role.Id, OracleDbType = OracleDbType.Varchar2, Direction = ParameterDirection.Input });
         }
 

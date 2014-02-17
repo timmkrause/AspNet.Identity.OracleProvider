@@ -92,8 +92,8 @@ namespace AspNet.Identity.OracleProvider.Repositories
                 {
                     Id = row["id"].ToString(),
                     UserName = row["username"].ToString(),
-                    PasswordHash = string.IsNullOrEmpty(row["passwordhash"].ToString()) ? null : row["passwordhash"].ToString(),
-                    SecurityStamp = string.IsNullOrEmpty(row["securitystamp"].ToString()) ? null : row["securitystamp"].ToString()
+                    PasswordHash = row["passwordhash"].ToString().HasValue() ? row["passwordhash"].ToString() : null,
+                    SecurityStamp = row["securitystamp"].ToString().HasValue() ? row["securitystamp"].ToString() : null
                 };
             }
 
@@ -111,8 +111,8 @@ namespace AspNet.Identity.OracleProvider.Repositories
                 {
                     Id = r["id"].ToString(),
                     UserName = r["username"].ToString(),
-                    PasswordHash = string.IsNullOrEmpty(r["passwordhash"].ToString()) ? null : r["passwordhash"].ToString(),
-                    SecurityStamp = string.IsNullOrEmpty(r["securitystamp"].ToString()) ? null : r["securitystamp"].ToString()
+                    PasswordHash = r["passwordhash"].ToString().HasValue() ? r["passwordhash"].ToString() : null,
+                    SecurityStamp = r["securitystamp"].ToString().HasValue() ? r["securitystamp"].ToString() : null
                 }).ToList();
         }
 
@@ -122,7 +122,7 @@ namespace AspNet.Identity.OracleProvider.Repositories
                 "SELECT passwordhash FROM users WHERE id = :id",
                 new OracleParameter { ParameterName = ":id", Value = userId, OracleDbType = OracleDbType.Varchar2, Direction = ParameterDirection.Input });
 
-            return string.IsNullOrEmpty(passwordHash) ? null : passwordHash;
+            return passwordHash.HasValue() ? passwordHash : null;
         }
 
         ////public int SetPasswordHash(string userId, string passwordHash)

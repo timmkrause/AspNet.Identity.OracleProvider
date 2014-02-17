@@ -65,8 +65,11 @@
     <Compile Include="AssemblyCleanupProcess.cs" />
     <Compile Include="AssemblyInitializationProcess.cs" />
     <Compile Include="Configuration.cs" />
-    <Compile Include="IntegrationTests\RoleManagerTests.cs" />
-    <Compile Include="IntegrationTests\UserManagerTests.cs" />
+    <Compile Include="ExtensionsTests.cs" />
+    <Compile Include="IdentityRoleTests.cs" />
+    <Compile Include="IntegrationTests\Managers\RoleManagerTests.cs" />
+    <Compile Include="IntegrationTests\Managers\UserManagerTests.cs" />
+    <Compile Include="IntegrationTests\Stores\RoleStoreTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

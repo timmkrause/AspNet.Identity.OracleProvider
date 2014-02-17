@@ -2,11 +2,8 @@
 
 namespace AspNet.Identity.OracleProvider
 {
-    using System.Diagnostics.CodeAnalysis;
-
     internal static class Extensions
     {
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Calls yet to come.")]
         public static bool HasValue(this string value)
         {
             return !value.HasNoValue();

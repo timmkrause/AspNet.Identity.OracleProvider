@@ -3,14 +3,19 @@ AspNet.Identity.OracleProvider
 
 ASP.NET Identity provider for Oracle databases.
 
-Status
-======
-
-At the moment the state of the project is "work in progress" and I really like to get some feedback.
-
 To Do
 =====
 
 - Generic UserStore (?): UserStore&lt;TUser&gt;
     - Extended properties to IdentityUser have to be added manually to the database.
-- OracleDataContext should be internal, just an OracleConnection or ConnectionString should be provided.
+
+Thanks to
+=========
+
+- Raquel Almeida and her ASP.NET Identity provider for MySQL which gave me an excellent jump-start:
+    - https://github.com/raquelsa/AspNet.Identity.MySQL
+    - http://www.asp.net/identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
+- Tugberk Ugurlu for completing my test scenarios:
+    - https://github.com/tugberkugurlu/AspNet.Identity.RavenDB/tree/master/tests/AspNet.Identity.RavenDB.Tests/Stores
+- David Boike for completing my test scenarios:
+    - https://github.com/ILMServices/RavenDB.AspNet.Identity/tree/master/RavenDB.AspNet.Identity.Tests

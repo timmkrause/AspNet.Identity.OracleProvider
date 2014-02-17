@@ -66,9 +66,9 @@ namespace AspNet.Identity.OracleProvider
 
         public Task<IdentityUser> FindByIdAsync(string userId)
         {
-            if (string.IsNullOrEmpty(userId))
+            if (userId.HasNoValue())
             {
-                throw new ArgumentException("Null or empty argument: userId");
+                throw new ArgumentException("userId");
             }
 
             var result = _userRepository.GetUserById(userId);
@@ -78,14 +78,13 @@ namespace AspNet.Identity.OracleProvider
 
         public Task<IdentityUser> FindByNameAsync(string userName)
         {
-            if (string.IsNullOrEmpty(userName))
+            if (userName.HasNoValue())
             {
-                throw new ArgumentException("Null or empty argument: userName");
+                throw new ArgumentException("userName");
             }
 
             var result = _userRepository.GetUserByName(userName).SingleOrDefault();
 
-            // Should I throw if > 1 user?
             return Task.FromResult(result);
         }
 
@@ -222,14 +221,14 @@ namespace AspNet.Identity.OracleProvider
                 throw new ArgumentNullException("user");
             }
 
-            if (string.IsNullOrEmpty(role))
+            if (role.HasNoValue())
             {
                 throw new ArgumentNullException("role");
             }
 
             var roleId = _roleRepository.GetRoleId(role);
 
-            if (!string.IsNullOrEmpty(roleId))
+            if (roleId.HasValue())
             {
                 _userRolesRepository.Insert(user, roleId);
             }
@@ -256,7 +255,7 @@ namespace AspNet.Identity.OracleProvider
                 throw new ArgumentNullException("user");
             }
 
-            if (string.IsNullOrEmpty(role))
+            if (role.HasNoValue())
             {
                 throw new ArgumentNullException("role");
             }
@@ -273,14 +272,14 @@ namespace AspNet.Identity.OracleProvider
                 throw new ArgumentNullException("user");
             }
 
-            if (string.IsNullOrEmpty(role))
+            if (role.HasNoValue())
             {
                 throw new ArgumentNullException("role");
             }
 
             var roleId = _roleRepository.GetRoleId(role);
 
-            if (!string.IsNullOrEmpty(roleId))
+            if (roleId.HasValue())
             {
                 _userRolesRepository.Delete(user, roleId);
             }
@@ -307,7 +306,7 @@ namespace AspNet.Identity.OracleProvider
                 throw new ArgumentNullException("user");
             }
 
-            var hasPassword = !string.IsNullOrEmpty(_userRepository.GetPasswordHash(user.Id));
+            var hasPassword = _userRepository.GetPasswordHash(user.Id).HasValue();
 
             return Task.FromResult(hasPassword);
         }
